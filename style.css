@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    margin-top: 1rem;
+    color: white;
+    background-color: black;
+    font-family: cursive;
+    transition: 0.25s;
+    width: 15rem;
+}
+
+h1:hover {
+    color: rgb(230, 77, 189);
+}
+
+#drumkit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem auto;
+}
+
+.element {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    width: 12vmax;
+    height: 12vmax;
+    padding: 1vmax;
+    cursor: pointer;
+    transition: 0.15s;
+    background: white;
+    box-shadow: 10px 10px 20px lightgray, -10px -10px 20px rgb(143, 136, 136);
+}
+
+.element:hover {
+    box-shadow: 15px 15px 30px lightgray, -15px -15px 30px rgb(143, 136, 136);
+}
+
+.active {
+    background-color: rgba(230, 77, 189, 0.532);
+    transform: scale(1.05);
+    transition: 0.15s;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+span {
+    font-size: 1rem;
+    width: 100%;
+    overflow-x: hidden;
+    word-break: break-word;
+    text-align: center;
+}
+
+.fa-drum {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: rgb(138, 138, 17);
+}
+
+/* ✅ Responsive Design */
+
+/* 📱 Small Screens (Mobile) */
+@media (max-width: 600px) {
+    .element {
+        width: 20vmax;
+        height: 20vmax;
+        padding: 2vmax;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    span {
+        font-size: 0.9rem;
+    }
+}
+
+/* 📱 Medium Screens (Tablets) */
+@media (max-width: 900px) {
+    .element {
+        width: 15vmax;
+        height: 15vmax;
+        padding: 1.5vmax;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    span {
+        font-size: 1rem;
+    }
+}
+
+/* 🖥 Large Screens (Desktops) */
+@media (min-width: 1200px) {
+    .element {
+        width: 10vmax;
+        height: 10vmax;
+        padding: 1vmax;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    span {
+        font-size: 1.1rem;
+    }
+}
